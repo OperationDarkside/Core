@@ -1,0 +1,6 @@
+- Raw Request
+- Parsed Request
+- Authenticate Request
+- Check Permission of Request
+- Get Response
+- Send Response
