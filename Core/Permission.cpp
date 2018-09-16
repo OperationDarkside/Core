@@ -31,6 +31,14 @@ void Permission::setRoleID (int _roleId) {
 	this->roleID = roleID;
 }
 
+bool Permission::areAllAttributesAllowed () {
+	return this->allAttributesAllowed;
+}
+
+void Permission::setAllAttributesAllowed (bool allowed) {
+	this->allAttributesAllowed = allowed;
+}
+
 std::unordered_map<int, AttributePermission>& Permission::getAttributePermissions () {
 	return attributePermissions;
 }

@@ -128,6 +128,7 @@
     <ClInclude Include="BoMetaManager.h" />
     <ClInclude Include="BoRequest.h" />
     <ClInclude Include="BoResponse.h" />
+    <ClInclude Include="BoStatusChangeRequest.h" />
     <ClInclude Include="BoType.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Container.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="BoMetaManager.cpp" />
     <ClCompile Include="BoRequest.cpp" />
     <ClCompile Include="BoResponse.cpp" />
+    <ClCompile Include="BoStatusChangeRequest.cpp" />
     <ClCompile Include="BoType.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Container.cpp" />

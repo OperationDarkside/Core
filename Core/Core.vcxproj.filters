@@ -202,7 +202,10 @@
       <Filter>Header Files\Manager</Filter>
     </ClInclude>
     <ClInclude Include="GroupLayer.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="BoStatusChangeRequest.h">
+      <Filter>Header Files\Requests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -330,7 +333,10 @@
       <Filter>Source Files\Manager</Filter>
     </ClCompile>
     <ClCompile Include="GroupLayer.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="BoStatusChangeRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

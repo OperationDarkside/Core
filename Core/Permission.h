@@ -20,12 +20,16 @@ public:
 	int getRoleID ();
 	void setRoleID (int _roleId);
 
+	bool areAllAttributesAllowed ();
+	void setAllAttributesAllowed (bool allowed);
+
 	std::unordered_map<int, AttributePermission>& getAttributePermissions ();
 
 private:
 	int id = 0;
 	int boMetaId = 0;
 	int roleID = 0;
+	bool allAttributesAllowed;
 	std::unordered_map<int, AttributePermission> attributePermissions;
 };
 

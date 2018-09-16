@@ -14,6 +14,9 @@ public:
 	int getID ();
 	void setID (int id);
 
+	bool hasPermission (int boMetaId);
+	Permission& getPermission (int boMetaId);
+
 	std::unordered_map<int, Permission>& getPermissions ();
 
 private:

@@ -12,6 +12,8 @@
 
 #include "BoRequest.h"
 #include "BoListRequest.h"
+#include "BoStatusChangeRequest.h"
+#include "LayoutRequest.h"
 
 #include "AuthLayer.h"
 
@@ -22,7 +24,9 @@ public:
 
 	bool hasBoPermission (BoRequest& req);
 	bool hasBoListPermission (BoListRequest& req);
-
+	bool hasStatusChangePermission (BoStatusChangeRequest& req);
+	bool hasLayoutPermission (LayoutRequest& req);
+	
 private:
 	UserGroup_Role_Rel_Manager& group_role_rel_manager;
 	RoleManager& roleManager;
