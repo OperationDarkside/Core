@@ -127,6 +127,8 @@
     <ClInclude Include="BoGroup.h" />
     <ClInclude Include="BoMeta.h" />
     <ClInclude Include="BoMetaManager.h" />
+    <ClInclude Include="BoMetaRequest.h" />
+    <ClInclude Include="BoMetaResponse.h" />
     <ClInclude Include="BoRequest.h" />
     <ClInclude Include="BoResponse.h" />
     <ClInclude Include="BoStatusChangeRequest.h" />
@@ -173,6 +175,8 @@
     <ClCompile Include="BoGroup.cpp" />
     <ClCompile Include="BoMeta.cpp" />
     <ClCompile Include="BoMetaManager.cpp" />
+    <ClCompile Include="BoMetaRequest.cpp" />
+    <ClCompile Include="BoMetaResponse.cpp" />
     <ClCompile Include="BoRequest.cpp" />
     <ClCompile Include="BoResponse.cpp" />
     <ClCompile Include="BoStatusChangeRequest.cpp" />

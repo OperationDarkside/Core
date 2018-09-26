@@ -42,3 +42,7 @@ void BoPermission::setAllAttributesAllowed (bool allowed) {
 std::unordered_map<int, AttributePermission>& BoPermission::getAttributePermissions () {
 	return attributePermissions;
 }
+
+std::unordered_map<int, StatusPermission>& BoPermission::getStatusPermissions () {
+	return statusPermissions;
+}

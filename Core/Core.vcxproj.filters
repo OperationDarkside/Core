@@ -210,6 +210,12 @@
     <ClInclude Include="BoPermission.h">
       <Filter>Header Files\Permission</Filter>
     </ClInclude>
+    <ClInclude Include="BoMetaRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="BoMetaResponse.h">
+      <Filter>Header Files\Responses</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserGroup.cpp">
@@ -346,6 +352,12 @@
     </ClCompile>
     <ClCompile Include="BoPermission.cpp">
       <Filter>Source Files\Permission</Filter>
+    </ClCompile>
+    <ClCompile Include="BoMetaRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="BoMetaResponse.cpp">
+      <Filter>Source Files\Responses</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

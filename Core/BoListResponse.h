@@ -8,6 +8,12 @@ class BoListResponse : public Response {
 public:
 	BoListResponse ();
 	~BoListResponse ();
+
+	bool getSuccess ();
+	void setSuccess (bool _success);
+
+private:
+	bool success = false;
 };
 
 #endif // !BOLISTRESPONSE_H

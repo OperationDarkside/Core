@@ -10,12 +10,14 @@
 #include "LayoutRequest.h"
 #include "BoRequest.h"
 #include "BoListRequest.h"
+#include "BoMetaRequest.h"
 
 // Responses
 #include "AuthResponse.h"
 #include "LayoutResponse.h"
 #include "BoResponse.h"
 #include "BoListResponse.h"
+#include "BoMetaResponse.h"
 
 // Layers
 #include "AuthLayer.h"
@@ -35,7 +37,10 @@ public:
 	LayoutResponse getLayout (LayoutRequest req);
 
 	BoResponse getBo (BoRequest req);
+
 	BoListResponse getBoList (BoListRequest req);
+
+	BoMetaResponse getBoMeta (BoMetaRequest req);
 
 private:
 	MasterManager masterManager;

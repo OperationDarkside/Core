@@ -3,6 +3,7 @@
 #define PERMISSION_H
 
 #include "AttributePermission.h"
+#include "StatusPermission.h"
 
 #include <unordered_map>
 
@@ -24,6 +25,7 @@ public:
 	void setAllAttributesAllowed (bool allowed);
 
 	std::unordered_map<int, AttributePermission>& getAttributePermissions ();
+	std::unordered_map<int, StatusPermission>& getStatusPermissions();
 
 private:
 	int id = 0;
@@ -31,6 +33,7 @@ private:
 	int roleID = 0;
 	bool allAttributesAllowed;
 	std::unordered_map<int, AttributePermission> attributePermissions;
+	std::unordered_map<int, StatusPermission> statusPermissions;
 };
 
 #endif // !PERMISSION_H

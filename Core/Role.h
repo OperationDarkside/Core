@@ -26,9 +26,11 @@ public:
 	int getLayoutPermissionIndex (int layoutId);
 	LayoutPermission& getLayoutPermission (int index);
 
-	//std::unordered_map<int, Permission>& getBoPermissions ();
-	//std::unordered_map<int, Permission>& getStatusPermissions ();
-	//std::unordered_map<int, Permission>& getLayoutPermissions ();
+	std::vector<BoPermission>& getBoPermissions ();
+	std::vector<StatusPermission>& getStatusPermissions ();
+	std::vector<LayoutPermission>& getLayoutPermissions ();
+
+	void setupIndices ();
 
 private:
 	int id = 0;

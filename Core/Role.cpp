@@ -52,19 +52,38 @@ LayoutPermission & Role::getLayoutPermission (int index) {
 	return layoutPermissions[index];
 }
 
+
+std::vector<BoPermission>& Role::getBoPermissions () {
+	return boPermissions;
+}
+
+std::vector<StatusPermission>& Role::getStatusPermissions () {
+	return statusPermissions;
+}
+
+std::vector<LayoutPermission>& Role::getLayoutPermissions () {
+	return layoutPermissions;
+}
+void Role::setupIndices () {
+	for (int i = 0; i < boPermissions.size (); ++i) {
+		auto& boPerm = boPermissions[i];
+
+		boPermissionIndex[boPerm.getID()] = i;
+	}
+
+	for (int i = 0; i < statusPermissions.size (); ++i) {
+		auto& statusPerm = statusPermissions[i];
+
+		statusPermissionIndex[statusPerm.getID ()] = i;
+	}
+
+	for (int i = 0; i < layoutPermissions.size (); ++i) {
+		auto& layoutPerm = layoutPermissions[i];
+
+		layoutPermissionIndex[layoutPerm.getID ()] = i;
+	}
+}
 /*
-std::unordered_map<int, Permission>& Role::getBoPermissions () {
-	// TODO: insert return statement here
-}
-
-std::unordered_map<int, Permission>& Role::getStatusPermissions () {
-	// TODO: insert return statement here
-}
-
-std::unordered_map<int, Permission>& Role::getLayoutPermissions () {
-	// TODO: insert return statement here
-}
-
 std::unordered_map<int, Permission>& Role::getBoPermissions () {
 	return boPermissions;
 }
