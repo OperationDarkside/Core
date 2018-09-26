@@ -2,9 +2,12 @@
 #ifndef ROLE_H
 #define ROLE_H
 
-#include "Permission.h"
+#include "BoPermission.h"
+#include "LayoutPermission.h"
+#include "StatusPermission.h"
 
 #include <unordered_map>
+#include <vector>
 
 class Role {
 public:
@@ -14,14 +17,29 @@ public:
 	int getID ();
 	void setID (int id);
 
-	bool hasPermission (int boMetaId);
-	Permission& getPermission (int boMetaId);
+	int getBoPermissionIndex (int boMetaId);
+	BoPermission& getBoPermission (int index);
 
-	std::unordered_map<int, Permission>& getPermissions ();
+	int getStatusPermissionIndex (int statusId);
+	StatusPermission& getStatusPermission (int index);
+
+	int getLayoutPermissionIndex (int layoutId);
+	LayoutPermission& getLayoutPermission (int index);
+
+	//std::unordered_map<int, Permission>& getBoPermissions ();
+	//std::unordered_map<int, Permission>& getStatusPermissions ();
+	//std::unordered_map<int, Permission>& getLayoutPermissions ();
 
 private:
 	int id = 0;
-	std::unordered_map<int, Permission> permissions;
+
+	std::vector<BoPermission> boPermissions;
+	std::vector<StatusPermission> statusPermissions;
+	std::vector<LayoutPermission> layoutPermissions;
+
+	std::unordered_map<int, int> boPermissionIndex;
+	std::unordered_map<int, int> statusPermissionIndex;
+	std::unordered_map<int, int> layoutPermissionIndex;
 };
 
 #endif // !ROLE_H

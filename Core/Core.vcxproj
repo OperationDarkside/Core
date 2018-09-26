@@ -84,6 +84,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\greis\Source\Repos\networking-ts-impl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -135,14 +136,15 @@
     <ClInclude Include="DataLayer.h" />
     <ClInclude Include="BoListRequest.h" />
     <ClInclude Include="BoListResponse.h" />
-    <ClInclude Include="DataManager.h" />
+    <ClInclude Include="MasterManager.h" />
     <ClInclude Include="GroupLayer.h" />
     <ClInclude Include="Layout.h" />
     <ClInclude Include="LayoutManager.h" />
+    <ClInclude Include="LayoutPermission.h" />
     <ClInclude Include="LayoutRequest.h" />
     <ClInclude Include="LayoutResponse.h" />
     <ClInclude Include="MasterLayer.h" />
-    <ClInclude Include="Permission.h" />
+    <ClInclude Include="BoPermission.h" />
     <ClInclude Include="PermissionLayer.h" />
     <ClInclude Include="Request.h" />
     <ClInclude Include="Response.h" />
@@ -180,14 +182,16 @@
     <ClCompile Include="DataLayer.cpp" />
     <ClCompile Include="BoListRequest.cpp" />
     <ClCompile Include="BoListResponse.cpp" />
-    <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="MasterManager.cpp" />
     <ClCompile Include="GroupLayer.cpp" />
     <ClCompile Include="Layout.cpp" />
     <ClCompile Include="LayoutManager.cpp" />
+    <ClCompile Include="LayoutPermission.cpp" />
     <ClCompile Include="LayoutRequest.cpp" />
     <ClCompile Include="LayoutResponse.cpp" />
     <ClCompile Include="MasterLayer.cpp" />
-    <ClCompile Include="Permission.cpp" />
+    <ClCompile Include="NetworkTest.cpp" />
+    <ClCompile Include="BoPermission.cpp" />
     <ClCompile Include="PermissionLayer.cpp" />
     <ClCompile Include="Request.cpp" />
     <ClCompile Include="Response.cpp" />

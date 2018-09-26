@@ -12,9 +12,9 @@ public:
 	BoMetaManager ();
 	~BoMetaManager ();
 
-	bool exists (int boMetaID);
+	int getIndex (int boMetaID);
 
-	BoMeta& getBoMeta (int boMetaID);
+	BoMeta& getBoMeta (int index);
 
 private:
 	std::vector<BoMeta> boMetas;

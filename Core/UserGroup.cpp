@@ -15,6 +15,8 @@ void UserGroup::setID (int id) {
 	this->id = id;
 }
 
+/*
 std::vector<User>& UserGroup::getUsers () {
 	return users;
 }
+*/

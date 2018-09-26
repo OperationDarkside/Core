@@ -1,6 +1,6 @@
 #pragma once
-#ifndef DATAMANAGER_H
-#define DATAMANAGER_H
+#ifndef MASTERMANAGER_H
+#define MASTERMANAGER_H
 
 #include "BoMeta.h"
 #include "Layout.h"
@@ -19,10 +19,10 @@
 #include <vector>
 #include <unordered_map>
 
-class DataManager {
+class MasterManager {
 public:
-	DataManager ();
-	~DataManager ();
+	MasterManager ();
+	~MasterManager ();
 
 	UserManager& getUserManager ();
 	User_UserGroup_Rel_Manager& getUser_UserGroup_RelationManager ();
@@ -43,4 +43,4 @@ private:
 
 };
 
-#endif // !DATAMANAGER_H
+#endif // !MASTERMANAGER_H

@@ -12,9 +12,9 @@ public:
 	RoleManager ();
 	~RoleManager ();
 
-	bool exists (int roleID);
+	int getIndex (int roleID);
 
-	Role& getRole (int roleID);
+	Role& getRole (int index);
 
 private:
 	std::vector<Role> roles;

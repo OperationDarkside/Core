@@ -12,13 +12,18 @@ public:
 	UserManager ();
 	~UserManager ();
 
-	bool exists (int userID);
+	int getIndex (int userID);
 
-	User& getUser (int userID);
+	int getIndex (std::string& username);
+
+	User& getUser (int index);
+
+	//User& getUser (std::string& username);
 
 private:
 	std::vector<User> users;
-	std::unordered_map<int, int> user_index;
+	std::unordered_map<int, int> userId_index;
+	std::unordered_map<std::string, int> username_index;
 };
 
 #endif // !USERMANAGER_H

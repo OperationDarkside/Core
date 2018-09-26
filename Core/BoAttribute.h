@@ -2,7 +2,7 @@
 #ifndef BOATTRIBUTE_H
 #define BOATTRIBUTE_H
 
-#include "Bo.h"
+// #include "Bo.h"
 
 class BoAttribute {
 public:

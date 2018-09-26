@@ -6,10 +6,10 @@
 
 #include <unordered_map>
 
-class Permission {
+class BoPermission {
 public:
-	Permission ();
-	~Permission ();
+	BoPermission ();
+	~BoPermission ();
 
 	int getID ();
 	void setID (int id);

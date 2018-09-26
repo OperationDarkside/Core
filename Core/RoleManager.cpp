@@ -7,16 +7,16 @@ RoleManager::RoleManager () {}
 
 RoleManager::~RoleManager () {}
 
-bool RoleManager::exists (int roleID) {
+int RoleManager::getIndex (int roleID) {
 	auto role_index_find = role_index.find (roleID);
 	if (role_index_find == role_index.end ()) {
-		return false;
+		return -1;
 	}
-	return true;
+	return role_index_find->second;
 }
 
-Role & RoleManager::getRole (int roleID) {
-	auto role_index_find = role_index.find (roleID);
+Role & RoleManager::getRole (int index) {
+	//auto role_index_find = role_index.find (roleID);
 
-	return roles[role_index_find->second];
+	return roles[index/*role_index_find->second*/];
 }

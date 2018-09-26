@@ -105,9 +105,6 @@
     <ClInclude Include="StatusTransition.h">
       <Filter>Header Files\Status</Filter>
     </ClInclude>
-    <ClInclude Include="Permission.h">
-      <Filter>Header Files\Permission</Filter>
-    </ClInclude>
     <ClInclude Include="AttributePermission.h">
       <Filter>Header Files\Permission</Filter>
     </ClInclude>
@@ -180,9 +177,6 @@
     <ClInclude Include="UserManager.h">
       <Filter>Header Files\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="DataManager.h">
-      <Filter>Header Files\Manager</Filter>
-    </ClInclude>
     <ClInclude Include="UserGroupManager.h">
       <Filter>Header Files\Manager</Filter>
     </ClInclude>
@@ -206,6 +200,15 @@
     </ClInclude>
     <ClInclude Include="BoStatusChangeRequest.h">
       <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="LayoutPermission.h">
+      <Filter>Header Files\Permission</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterManager.h">
+      <Filter>Header Files\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BoPermission.h">
+      <Filter>Header Files\Permission</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -235,9 +238,6 @@
     </ClCompile>
     <ClCompile Include="StatusTransition.cpp">
       <Filter>Source Files\Status</Filter>
-    </ClCompile>
-    <ClCompile Include="Permission.cpp">
-      <Filter>Source Files\Permission</Filter>
     </ClCompile>
     <ClCompile Include="AttributePermission.cpp">
       <Filter>Source Files\Permission</Filter>
@@ -308,9 +308,6 @@
     <ClCompile Include="BoResponse.cpp">
       <Filter>Source Files\Responses</Filter>
     </ClCompile>
-    <ClCompile Include="DataManager.cpp">
-      <Filter>Source Files\Manager</Filter>
-    </ClCompile>
     <ClCompile Include="UserManager.cpp">
       <Filter>Source Files\Manager</Filter>
     </ClCompile>
@@ -337,6 +334,18 @@
     </ClCompile>
     <ClCompile Include="BoStatusChangeRequest.cpp">
       <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LayoutPermission.cpp">
+      <Filter>Source Files\Permission</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterManager.cpp">
+      <Filter>Source Files\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BoPermission.cpp">
+      <Filter>Source Files\Permission</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

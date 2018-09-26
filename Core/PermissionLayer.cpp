@@ -18,20 +18,20 @@ bool PermissionLayer::hasBoPermission (BoRequest & boReq) {
 		return false;
 	}
 
-	bool role_exists = roleManager.exists (roleId_find);
-	if (!role_exists) {
+	int role_index = roleManager.getIndex (roleId_find);
+	if (role_index == -1) {
 		return false;
 	}
 
-	Role& role = roleManager.getRole (roleId_find);
+	Role& role = roleManager.getRole (role_index);
 
-	bool hasPermission = role.hasPermission (boReq.getBoMetaID ());
-	if (!hasPermission) {
+	int boPermIndex = role.getBoPermissionIndex (boReq.getBoMetaID ());
+	if (boPermIndex == -1) {
 		// No Bo Permission
 		return false;
 	}
 
-	Permission& perm = role.getPermission (boReq.getBoMetaID ());
+	BoPermission& perm = role.getBoPermission (boPermIndex);
 	
 	bool wantsAllAttributes = boReq.wantsAllAttributes ();
 	if (wantsAllAttributes) {
@@ -82,5 +82,24 @@ bool PermissionLayer::hasStatusChangePermission (BoStatusChangeRequest& req) {
 }
 
 bool PermissionLayer::hasLayoutPermission (LayoutRequest& req) {
-	return false;
+	auto roleId_find = group_role_rel_manager.getRoleID (req.getUserGroupID ());
+	if (roleId_find == -1) {
+		return false;
+	}
+
+	int role_index = roleManager.getIndex (roleId_find);
+	if (role_index == -1) {
+		return false;
+	}
+
+	Role& role = roleManager.getRole (role_index);
+
+	int layoutPermIndex = role.getLayoutPermissionIndex (req.getLayoutID());
+	if (layoutPermIndex == -1) {
+		return false;
+	}
+
+	LayoutPermission& layoutPerm = role.getLayoutPermission (layoutPermIndex);
+
+	return true;
 }

@@ -3,7 +3,7 @@
 #define MASTERLAYER_H
 
 // Data
-#include "DataManager.h"
+#include "MasterManager.h"
 
 // Requests
 #include "AuthRequest.h"
@@ -38,7 +38,7 @@ public:
 	BoListResponse getBoList (BoListRequest req);
 
 private:
-	DataManager dataManager;
+	MasterManager masterManager;
 	AuthLayer authLayer;
 	GroupLayer groupLayer;
 	PermissionLayer permissionLayer;

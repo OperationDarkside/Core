@@ -12,9 +12,9 @@ public:
 	LayoutManager ();
 	~LayoutManager ();
 
-	bool exists (int layoutID);
+	int getIndex (int layoutID);
 
-	Layout& getLayout (int layoutID);
+	Layout& getLayout (int index);
 
 private:
 	std::vector<Layout> layouts;

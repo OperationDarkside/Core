@@ -7,16 +7,16 @@ LayoutManager::LayoutManager () {}
 
 LayoutManager::~LayoutManager () {}
 
-bool LayoutManager::exists (int layoutID) {
+int LayoutManager::getIndex (int layoutID) {
 	auto layout_index_find = layout_index.find (layoutID);
 	if (layout_index_find == layout_index.end ()) {
-		return false;
+		return -1;
 	}
-	return true;
+	return layout_index_find->second;
 }
 
-Layout & LayoutManager::getLayout (int layoutID) {
-	auto layout_index_find = layout_index.find (layoutID);
+Layout & LayoutManager::getLayout (int index) {
+	//auto layout_index_find = layout_index.find (layoutID);
 
-	return layouts[layout_index_find->second];
+	return layouts[index/*layout_index_find->second*/];
 }

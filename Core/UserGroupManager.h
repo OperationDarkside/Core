@@ -12,9 +12,9 @@ public:
 	UserGroupManager ();
 	~UserGroupManager ();
 
-	bool exists (int groupID);
+	int getIndex (int groupID);
 
-	UserGroup& getUserGroup (int groupID);
+	UserGroup& getUserGroup (int index);
 
 private:
 	std::vector<UserGroup> groups;
