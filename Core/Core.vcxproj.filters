@@ -216,6 +216,51 @@
     <ClInclude Include="BoMetaResponse.h">
       <Filter>Header Files\Responses</Filter>
     </ClInclude>
+    <ClInclude Include="AddLayoutRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="AddLayoutResponse.h">
+      <Filter>Header Files\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryBuilder.h">
+      <Filter>Header Files\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="SetLayoutRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="SetLayoutResponse.h">
+      <Filter>Header Files\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="AddBoRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="AddBoResponse.h">
+      <Filter>Header Files\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="SetBoRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="SetBoResponse.h">
+      <Filter>Header Files\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="AddBoMetaRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="AddBoMetaResponse.h">
+      <Filter>Header Files\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="SetBoMetaRequest.h">
+      <Filter>Header Files\Requests</Filter>
+    </ClInclude>
+    <ClInclude Include="SetBoMetaResponse.h">
+      <Filter>Header Files\Responses</Filter>
+    </ClInclude>
+    <ClInclude Include="BoReference.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoDateTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserGroup.cpp">
@@ -358,6 +403,51 @@
     </ClCompile>
     <ClCompile Include="BoMetaResponse.cpp">
       <Filter>Source Files\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryBuilder.cpp">
+      <Filter>Source Files\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="AddLayoutRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="AddLayoutResponse.cpp">
+      <Filter>Source Files\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="SetLayoutRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="SetLayoutResponse.cpp">
+      <Filter>Source Files\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBoRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBoResponse.cpp">
+      <Filter>Source Files\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="SetBoRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="SetBoResponse.cpp">
+      <Filter>Source Files\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBoMetaRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBoMetaResponse.cpp">
+      <Filter>Source Files\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="SetBoMetaRequest.cpp">
+      <Filter>Source Files\Requests</Filter>
+    </ClCompile>
+    <ClCompile Include="SetBoMetaResponse.cpp">
+      <Filter>Source Files\Responses</Filter>
+    </ClCompile>
+    <ClCompile Include="BoReference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoDateTime.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

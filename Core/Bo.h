@@ -19,14 +19,14 @@ public:
 	int getBoMetaId ();
 	void setBoMetaId (int boMetaId);
 
-	std::vector<std::unique_ptr<BoAttribute>>& getAttributes ();
-
+	std::vector<BoAttribute>& getAttributes ();
+	void setAttributes (std::vector<BoAttribute> _attributes);
 private:
 	int id = 0;
 
 	int boMetaId = 0;
 
-	std::vector<std::unique_ptr<BoAttribute>> attributes;
+	std::vector<BoAttribute> attributes;
 };
 
 #endif // !BO_H

@@ -3,6 +3,14 @@
 #define BOATTRIBUTE_H
 
 // #include "Bo.h"
+#include "BoAttributeType.h"
+#include "BoReference.h"
+#include "BoDateTime.h"
+
+#include <string>
+#include <variant>
+
+using BoValue = std::variant<long, double, BoDateTime, std::string, BoReference>;
 
 class BoAttribute {
 public:
@@ -12,9 +20,16 @@ public:
 	int getBoAttributeMetaID ();
 	void setBoAttributeMetaID (int attrId);
 
-private:
+	BoAttributeType getType ();
+	void setType (BoAttributeType _type);
 
+	BoValue& getValue ();
+	void setValue (BoValue _value);
+
+private:
 	int boAttributeMeta = 0;
+	BoAttributeType type = BoAttributeType::INTEGER;
+	BoValue val;
 };
 
 #endif // !BOATTRIBUTE_H

@@ -7,6 +7,14 @@ BoRequest::BoRequest () {}
 
 BoRequest::~BoRequest () {}
 
+int BoRequest::getBoID () {
+	return boID;
+}
+
+void BoRequest::setBoID (int _id) {
+	boID = _id;
+}
+
 int BoRequest::getBoMetaID () {
 	return boMetaID;
 }

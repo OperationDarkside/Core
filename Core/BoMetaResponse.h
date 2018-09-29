@@ -2,6 +2,8 @@
 #ifndef BOMETARESPONSE_H
 #define BOMETARESPONSE_H
 
+#include "Response.h"
+
 #include "BoMeta.h"
 
 class BoMetaResponse {

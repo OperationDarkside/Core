@@ -23,6 +23,10 @@ void Bo::setBoMetaId (int boMetaId) {
 	this->boMetaId = boMetaId;
 }
 
-std::vector<std::unique_ptr<BoAttribute>>& Bo::getAttributes () {
+std::vector<BoAttribute>& Bo::getAttributes () {
 	return attributes;
+}
+
+void Bo::setAttributes (std::vector<BoAttribute> _attributes) {
+	attributes = _attributes;
 }

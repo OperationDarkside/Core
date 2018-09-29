@@ -6,6 +6,7 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 class BoMeta {
 public:
@@ -19,6 +20,7 @@ public:
 	void setName (std::string _name);
 
 	std::vector<BoAttributeMeta>& getAttributes ();
+	std::unordered_map<int, int>& getAttributeIndex();
 
 private:
 	int id = 0;
@@ -26,6 +28,7 @@ private:
 	std::string name;
 
 	std::vector<BoAttributeMeta> attributes;
+	std::unordered_map<int, int> attrIndex;
 };
 
 #endif // !BOMETA_H

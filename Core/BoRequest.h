@@ -11,6 +11,9 @@ public:
 	BoRequest ();
 	~BoRequest ();
 
+	int getBoID ();
+	void setBoID (int _id);
+
 	int getBoMetaID ();
 	void setBoMetaID (int _metaId);
 
@@ -24,6 +27,7 @@ public:
 	std::vector<int>& getAllowedStatuses ();
 
 private:
+	int boID = 0;
 	int boMetaID = 0;
 	bool requestsAllAttributes = false;
 	bool requestsAllAvailableAttributes = false;

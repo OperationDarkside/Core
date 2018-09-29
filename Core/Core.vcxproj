@@ -84,8 +84,14 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\greis\Source\Repos\networking-ts-impl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\greis\Source\Repos\networking-ts-impl\include;C:\Users\greis\Source\Repos\libpqxx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\greis\Source\Repos\libpqxx\bin\src\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;pqxx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -116,6 +122,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AddBoMetaRequest.h" />
+    <ClInclude Include="AddBoMetaResponse.h" />
+    <ClInclude Include="AddBoRequest.h" />
+    <ClInclude Include="AddBoResponse.h" />
+    <ClInclude Include="AddLayoutRequest.h" />
+    <ClInclude Include="AddLayoutResponse.h" />
     <ClInclude Include="AttributePermission.h" />
     <ClInclude Include="AuthLayer.h" />
     <ClInclude Include="AuthRequest.h" />
@@ -124,11 +136,13 @@
     <ClInclude Include="BoAttribute.h" />
     <ClInclude Include="BoAttributeMeta.h" />
     <ClInclude Include="BoAttributeType.h" />
+    <ClInclude Include="BoDateTime.h" />
     <ClInclude Include="BoGroup.h" />
     <ClInclude Include="BoMeta.h" />
     <ClInclude Include="BoMetaManager.h" />
     <ClInclude Include="BoMetaRequest.h" />
     <ClInclude Include="BoMetaResponse.h" />
+    <ClInclude Include="BoReference.h" />
     <ClInclude Include="BoRequest.h" />
     <ClInclude Include="BoResponse.h" />
     <ClInclude Include="BoStatusChangeRequest.h" />
@@ -148,10 +162,17 @@
     <ClInclude Include="MasterLayer.h" />
     <ClInclude Include="BoPermission.h" />
     <ClInclude Include="PermissionLayer.h" />
+    <ClInclude Include="QueryBuilder.h" />
     <ClInclude Include="Request.h" />
     <ClInclude Include="Response.h" />
     <ClInclude Include="Role.h" />
     <ClInclude Include="RoleManager.h" />
+    <ClInclude Include="SetBoMetaRequest.h" />
+    <ClInclude Include="SetBoMetaResponse.h" />
+    <ClInclude Include="SetBoRequest.h" />
+    <ClInclude Include="SetBoResponse.h" />
+    <ClInclude Include="SetLayoutRequest.h" />
+    <ClInclude Include="SetLayoutResponse.h" />
     <ClInclude Include="Status.h" />
     <ClInclude Include="StatusChange.h" />
     <ClInclude Include="StatusPermission.h" />
@@ -165,6 +186,12 @@
     <ClInclude Include="User_UserGroup_Rel_Manager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AddBoMetaRequest.cpp" />
+    <ClCompile Include="AddBoMetaResponse.cpp" />
+    <ClCompile Include="AddBoRequest.cpp" />
+    <ClCompile Include="AddBoResponse.cpp" />
+    <ClCompile Include="AddLayoutRequest.cpp" />
+    <ClCompile Include="AddLayoutResponse.cpp" />
     <ClCompile Include="AttributePermission.cpp" />
     <ClCompile Include="AuthLayer.cpp" />
     <ClCompile Include="AuthRequest.cpp" />
@@ -172,11 +199,13 @@
     <ClCompile Include="Bo.cpp" />
     <ClCompile Include="BoAttribute.cpp" />
     <ClCompile Include="BoAttributeMeta.cpp" />
+    <ClCompile Include="BoDateTime.cpp" />
     <ClCompile Include="BoGroup.cpp" />
     <ClCompile Include="BoMeta.cpp" />
     <ClCompile Include="BoMetaManager.cpp" />
     <ClCompile Include="BoMetaRequest.cpp" />
     <ClCompile Include="BoMetaResponse.cpp" />
+    <ClCompile Include="BoReference.cpp" />
     <ClCompile Include="BoRequest.cpp" />
     <ClCompile Include="BoResponse.cpp" />
     <ClCompile Include="BoStatusChangeRequest.cpp" />
@@ -197,10 +226,17 @@
     <ClCompile Include="NetworkTest.cpp" />
     <ClCompile Include="BoPermission.cpp" />
     <ClCompile Include="PermissionLayer.cpp" />
+    <ClCompile Include="QueryBuilder.cpp" />
     <ClCompile Include="Request.cpp" />
     <ClCompile Include="Response.cpp" />
     <ClCompile Include="Role.cpp" />
     <ClCompile Include="RoleManager.cpp" />
+    <ClCompile Include="SetBoMetaRequest.cpp" />
+    <ClCompile Include="SetBoMetaResponse.cpp" />
+    <ClCompile Include="SetBoRequest.cpp" />
+    <ClCompile Include="SetBoResponse.cpp" />
+    <ClCompile Include="SetLayoutRequest.cpp" />
+    <ClCompile Include="SetLayoutResponse.cpp" />
     <ClCompile Include="Status.cpp" />
     <ClCompile Include="StatusChange.cpp" />
     <ClCompile Include="StatusPermission.cpp" />

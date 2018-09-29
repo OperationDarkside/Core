@@ -23,6 +23,14 @@ void BoAttributeMeta::setBoMetaID (int metaId) {
 	this->boMetaId = boMetaId;
 }
 
+BoAttributeType BoAttributeMeta::getType () {
+	return type;
+}
+
+void BoAttributeMeta::setType (BoAttributeType _type) {
+	type = _type;
+}
+
 std::string & BoAttributeMeta::getName () {
 	return name;
 }

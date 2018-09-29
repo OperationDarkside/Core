@@ -18,23 +18,28 @@ AuthResponse MasterLayer::getAuthentication (AuthRequest req) {
 	return resp;
 }
 
+AddLayoutResponse MasterLayer::addLayout (AddLayoutRequest req) {
+	return AddLayoutResponse ();
+}
+
 LayoutResponse MasterLayer::getLayout (LayoutRequest req) {
 	LayoutResponse resp;
 
 	Request* raw_req = static_cast<Request*>(&req);
 
+	// Auth
 	bool isAuth = authLayer.authenticate (raw_req);
 	if (!isAuth) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Group
 	bool hasGroup = groupLayer.hasGroup (raw_req);
 	if (!hasGroup) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Permission
 	bool hasLayoutPerm = permissionLayer.hasLayoutPermission (req);
 	if (!hasLayoutPerm) {
 		resp.setSuccess (false);
@@ -56,23 +61,31 @@ LayoutResponse MasterLayer::getLayout (LayoutRequest req) {
 	return resp;
 }
 
+SetLayoutResponse MasterLayer::setLayout (SetLayoutRequest req) {
+	return SetLayoutResponse (); // TODO
+}
+
+AddBoResponse MasterLayer::addBo (AddBoRequest req) {
+	return AddBoResponse (); // TODO
+}
+
 BoResponse MasterLayer::getBo (BoRequest req) {
 	BoResponse resp;
 
 	Request* raw_req = static_cast<Request*>(&req);
-
+	// Auth
 	bool isAuth = authLayer.authenticate (raw_req);
 	if (!isAuth) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Group
 	bool hasGroup = groupLayer.hasGroup (raw_req);
 	if (!hasGroup) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Permission
 	bool hasBoPerm = permissionLayer.hasBoPermission (req);
 	if (!hasBoPerm) {
 		resp.setSuccess (false);
@@ -86,23 +99,27 @@ BoResponse MasterLayer::getBo (BoRequest req) {
 	return resp;
 }
 
+SetBoResponse MasterLayer::setBo (SetBoRequest req) {
+	return SetBoResponse (); // TODO
+}
+
 BoListResponse MasterLayer::getBoList (BoListRequest req) {
 	BoListResponse resp;
 
 	Request* raw_req = static_cast<Request*>(&req);
-
+	// Auth
 	bool isAuth = authLayer.authenticate (raw_req);
 	if (!isAuth) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Group
 	bool hasGroup = groupLayer.hasGroup (raw_req);
 	if (!hasGroup) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Permission
 	bool hasBoPerm = permissionLayer.hasBoListPermission (req);
 	if (!hasBoPerm) {
 		resp.setSuccess (false);
@@ -116,23 +133,27 @@ BoListResponse MasterLayer::getBoList (BoListRequest req) {
 	return resp;
 }
 
+AddBoMetaResponse MasterLayer::addBoMeta (AddBoMetaRequest req) {
+	return AddBoMetaResponse (); // TODO
+}
+
 BoMetaResponse MasterLayer::getBoMeta (BoMetaRequest req) {
 	BoMetaResponse resp;
 
 	Request* raw_req = static_cast<Request*>(&req);
-
+	// Auth
 	bool isAuth = authLayer.authenticate (raw_req);
 	if (!isAuth) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Group
 	bool hasGroup = groupLayer.hasGroup (raw_req);
 	if (!hasGroup) {
 		resp.setSuccess (false);
 		return resp;
 	}
-
+	// Permission
 	bool hasBoMetaPerm = permissionLayer.hasBoMetaPermission (req);
 	if (!hasBoMetaPerm) {
 		resp.setSuccess (false);
@@ -172,4 +193,8 @@ BoMetaResponse MasterLayer::getBoMeta (BoMetaRequest req) {
 	resp.setSuccess (true);
 
 	return resp;
+}
+
+SetBoMetaResponse MasterLayer::setBoMeta (SetBoMetaRequest req) {
+	return SetBoMetaResponse (); // TODO
 }
