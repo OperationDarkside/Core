@@ -24,6 +24,8 @@ public:
 	MasterManager ();
 	~MasterManager ();
 
+	void load ();
+
 	UserManager& getUserManager ();
 	User_UserGroup_Rel_Manager& getUser_UserGroup_RelationManager ();
 	UserGroupManager& getUserGroupManager ();
@@ -40,7 +42,6 @@ private:
 	RoleManager roleManager;
 	BoMetaManager boMetaManager;
 	LayoutManager layoutManager;
-
 };
 
 #endif // !MASTERMANAGER_H
