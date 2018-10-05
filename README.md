@@ -22,5 +22,5 @@ Because speed is all you need
 
 ## Honorable Mention
 
-This project is inspired by the idea of Nuclos and its idea of BOs and their permission model.
+This project is inspired by Nuclos and its idea of BOs and their permission model.
 No code is taken from the Nuclos project and the JSON API will be different too. (Hopefully more efficient ;-) )
