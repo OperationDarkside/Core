@@ -5,7 +5,8 @@
 MasterLayer::MasterLayer () :
 	authLayer (masterManager.getUserManager ()),
 	groupLayer (masterManager.getUser_UserGroup_RelationManager ()),
-	permissionLayer (masterManager.getUserGroup_Role_Rel_Manager (), masterManager.getRoleManager ()) {
+	permissionLayer (masterManager.getUserGroup_Role_Rel_Manager (), masterManager.getRoleManager ()),
+	dataLayer (masterManager.getBoMetaManager ()) {
 
 }
 
@@ -176,10 +177,10 @@ BoMetaResponse MasterLayer::getBoMeta (BoMetaRequest req) {
 	auto& oldAttribs = boMeta.getAttributes ();
 	auto& newAttribs = newBoMeta.getAttributes ();
 
-	for (auto attribId : req.getAttributeIDs()) {
+	for (auto attribId : req.getAttributeIDs ()) {
 		// Dirty, TODO use index
 		for (auto& oldAttrib : oldAttribs) {
-			if (attribId == oldAttrib.getID()) {
+			if (attribId == oldAttrib.getID ()) {
 				newAttribs.push_back (oldAttrib);
 				break;
 			}

@@ -11,8 +11,16 @@ public:
 	int getID ();
 	void setID (int _id);
 
+	int getRoleID ();
+	void setRoleID (int _id);
+
+	int getLayoutID ();
+	void setLayoutID (int _id);
+
 private:
-	int id;
+	int id = 0;
+	int roleID = 0;
+	int layoutID = 0;
 };
 
 #endif // !LAYOUTPERMISSION_H
