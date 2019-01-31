@@ -1,3 +1,5 @@
+#define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
+
 #include <experimental/net>
 #include <iostream>
 #include <string>
@@ -103,6 +105,37 @@ private:
 
 };
 
+struct Base {
+	using type1 = char;
+};
+
+struct A : public Base {
+	using type1 = int;
+};
+
+struct B : public Base {
+	//using type1 = double;
+};
+
+B operator "" _flupp (const char* str, size_t size) {
+	for (int i = 0; i < size; ++i) {
+		char c = str[i];
+
+		std::cout << c << "\n";
+	}
+
+	return B{};
+}
+
+B operator "" _sql (const char* str) {
+	for (int i = 0; i < 5; ++i) {
+		char c = str[i];
+
+		std::cout << c << "\n";
+	}
+
+	return B{};
+}
 
 int main () {
 	/*
@@ -117,7 +150,7 @@ int main () {
 	io_context.run ();
 	std::cout << "end" << std::endl;
 	*/
-
+	/*
 	try {
 		pqxx::connection C ("user='postgres' password='admin' host='127.0.0.1' port='5432' dbname='postgres'");
 		std::cout << "Connected to " << C.dbname () << std::endl;
@@ -138,6 +171,13 @@ int main () {
 	} catch (const std::exception &e) {
 		std::cerr << e.what () << std::endl;
 		return 1;
-	}
+	}*/
+
+	B b1 = "SELECT * FROM magenta where bla = '5';"_flupp;
+	B b2 = 1234_sql;
+
+	int bla;
+	std::cin >> bla;
+
 	return 0;
 }

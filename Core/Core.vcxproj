@@ -149,6 +149,8 @@
     <ClInclude Include="BoType.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Container.h" />
+    <ClInclude Include="ContainerComponent.h" />
+    <ClInclude Include="ContainerContainerRel.h" />
     <ClInclude Include="DataLayer.h" />
     <ClInclude Include="BoListRequest.h" />
     <ClInclude Include="BoListResponse.h" />
@@ -212,6 +214,8 @@
     <ClCompile Include="BoType.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Container.cpp" />
+    <ClCompile Include="ContainerComponent.cpp" />
+    <ClCompile Include="ContainerContainerRel.cpp" />
     <ClCompile Include="DataLayer.cpp" />
     <ClCompile Include="BoListRequest.cpp" />
     <ClCompile Include="BoListResponse.cpp" />

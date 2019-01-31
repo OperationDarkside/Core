@@ -261,6 +261,12 @@
     <ClInclude Include="BoDateTime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ContainerComponent.h">
+      <Filter>Header Files\Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerContainerRel.h">
+      <Filter>Header Files\Layout</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserGroup.cpp">
@@ -448,6 +454,12 @@
     </ClCompile>
     <ClCompile Include="BoDateTime.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerComponent.cpp">
+      <Filter>Source Files\Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerContainerRel.cpp">
+      <Filter>Source Files\Layout</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
